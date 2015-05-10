@@ -1,4 +1,4 @@
-ios development tips for newyies 
+ios development tips for newies 
 ======================================
 this is my daily records in ios development, learned one then write down one... 
 
@@ -21,10 +21,10 @@ this is my daily records in ios development, learned one then write down one...
     
 ### @2015/05/06/  
 
-- 苹果IPHONE 5/5s屏幕分辨率：1136×640
-- [1] iPhone 6 Plus 采用标准的 1920×1080分辨率屏幕，PPI值为401；
-- [2] iPhone 6 则采用了1334×750分辨率的屏幕，PPI值为326。
-- 显然，iPhone 6 Plus显示效果比iPhone 6好很多。
+> 苹果IPHONE 5/5s屏幕分辨率：1136×640  
+  [1] iPhone 6 Plus 采用标准的 1920×1080分辨率屏幕，PPI值为401；  
+  [2] iPhone 6 则采用了1334×750分辨率的屏幕，PPI值为326。  
+  显然，iPhone 6 Plus显示效果比iPhone 6好很多。  
 
 * [4]. 如何为源码中的outlet连接到UI控件：
     当.h代码中添加outlet比如：@property (nonatomic, strong) IBOutlet MKMapView *mapView;
@@ -32,9 +32,9 @@ this is my daily records in ios development, learned one then write down one...
     则可以通过按住ctrl键，拖拽view controller图标到storyborad上的ui control对象上释放；
     选择弹出列表已定义的outlet实例即可；
     
-> Q1: 如何让UI控件自适应iphone5, iphone6不同大小屏幕?
- 故事板中的控件均应该添加丢失的约束，这样不至于下次打开工程时法师控件失踪事件。。。
- 在toolbar中的控件没法通过约束自适应，只能通过flexible space bbi & fixed space bbi;
+> Q1: 如何让UI控件自适应iphone5, iphone6不同大小屏幕?  
+ 故事板中的控件均应该添加丢失的约束，这样不至于下次打开工程时法师控件失踪事件。。。  
+ 在toolbar中的控件没法通过约束自适应，只能通过flexible space bbi & fixed space bbi;  
  暂时无法通过IB来控制应用界面适配iphone5和iphone6....
     
 * [5].  如何修改navigation item中的返回标题：
