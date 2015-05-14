@@ -42,9 +42,9 @@ this is my daily records in ios development, learned one then write down one...
     选择弹出列表已定义的outlet实例即可；  
     
 * :zap:[6]. __如何让UI控件自适应iphone5, iphone6不同大小屏幕?__  
-    故事板中的控件均应该添加丢失的约束，这样不至于下次打开工程时法师控件失踪事件。。。  
+    故事板中的控件均应该添加丢失的约束，这样不至于下次打开工程时发生控件失踪事件。。。  
     在toolbar中的控件没法通过约束自适应，只能通过flexible space bbi & fixed space bbi;  
-    暂时无法通过IB来控制应用界面适配iphone5和iphone6....
+    ~~暂时无法通过IB来控制应用界面适配iphone5和iphone6~~....
     
 * :zap:[7]. __如何修改navigation item中的返回标题?__：  
     当view controller嵌入navigation controller后，当前的vc就有了标题栏(Navigation Item)；  
