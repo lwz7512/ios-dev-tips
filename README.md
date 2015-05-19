@@ -83,7 +83,7 @@ this is my daily records in ios development, learned one then write down one...
     
 ### @2015/05/19
 
-* :zap:[11]. __如何在xcode工程中使用CocoaPods进行库依赖管理__: 
+* :zap:[11]. __如何在xcode工程中使用[CocoaPods](https://cocoapods.org/)进行库依赖管理__: 
     安装：$ sudo gem install cocoapods  
     安装后就可以使用pod命令了，首先要建立本地CocoaPods environment：$ pod setup  
     在xcode工程目录下创建一个[Podfile](https://guides.cocoapods.org/using/the-podfile.html)文件来管理依赖的库  
