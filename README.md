@@ -71,3 +71,30 @@ this is my daily records in ios development, learned one then write down one...
     
     
 
+### @2015/05/18
+
+* :zap:[10]. __如何将[MBProgressHUD](https://github.com/jdg/MBProgressHUD)组件引入当前工程？__:
+    MBProgressHUD是非常常用的进度条组件，引入步骤也非常简单，使用CocoaPods方式受GWF所限，这里只用源码方式：  
+    在你的工程目录下git clone https://github.com/jdg/MBProgressHUD.git  
+    xcode中打开你的工程，打开MBProgressHUD文件夹，从中拖拽MBProgressHUD.h和MBProgressHUD.m到你的工程视图目录树中  
+    释放后在弹出窗口中确保选择Destination: Copy items if needed  
+    在你的视图控制器中引入该组件：#import "MBProgressHUD.h"  
+    
+    
+### @2015/05/19
+
+* :zap:[11]. __如何在xcode工程中使用CocoaPods进行库依赖管理__: 
+    安装：$ sudo gem install cocoapods  
+    安装后就可以使用pod命令了，首先要建立本地CocoaPods environment：$ pod setup  
+    在xcode工程目录下创建一个[Podfile](https://guides.cocoapods.org/using/the-podfile.html)文件来管理依赖的库  
+    在该文件中添加：
+    pod 'AFNetworking', '~> 2.0'  
+    pod 'ObjectiveSugar', '~> 0.5' 
+    然后执行：$ pod install  
+    这样依赖的库就下载到工程中了，如果该工程已经打开，则关掉，双击*.xcworkspace打开整合pod的新工程  
+    如果添加新的依赖，则再添加一行pod 'libaray name'，然后：$ pod install or $ pod update  
+    update命令会更新依赖库到最新版本，而install只按照配置文件中的版本去下载  
+    如果以前是以源码方式引入库，再使用pod方式重新添加该库时，则要在工程视图中删掉拷贝进来的.h/.m文件，否则编译失败  
+    报错说符号重复。。。因为重复引用了。。。
+    
+    
