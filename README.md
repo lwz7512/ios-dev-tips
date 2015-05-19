@@ -89,7 +89,7 @@ this is my daily records in ios development, learned one then write down one...
     在xcode工程目录下创建一个[Podfile](https://guides.cocoapods.org/using/the-podfile.html)文件来管理依赖的库  
     在该文件中添加：
     pod 'AFNetworking', '~> 2.0'  
-    pod 'ObjectiveSugar', '~> 0.5' 
+    pod 'ObjectiveSugar', '~> 0.5'  
     然后执行：`$ pod install`  
     这样依赖的库就下载到工程中了，如果该工程已经打开，则关掉，双击*.xcworkspace打开整合pod的新工程  
     如果添加新的依赖，则再添加一行pod 'libaray name'，然后：`$ pod install` or `$ pod update`  
