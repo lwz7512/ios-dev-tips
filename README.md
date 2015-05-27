@@ -4,7 +4,7 @@ this is my daily records in ios development, learned one then write down one...
 
 ### @2015/05/03
 
-* :zap:[1]. __如何创建view controller?__:  
+* :zap:[1]. __如何创建view controller__:  
     在工程中创建controllers组，然后在组上右键，New File... >  
     iOS/Source 选择Cocoa Touch Class, Next > Subclass of: UIViewController  
     Class: 中会自动填入ViewController，将光标定位在ViewController前面，输入新控制器名字，Next >  
@@ -12,13 +12,13 @@ this is my daily records in ios development, learned one then write down one...
 
 ### @2015/05/04 
 
-* :zap:[2]. __UI控件如何在源代码中引用?__:  
+* :zap:[2]. __UI控件如何在源代码中引用__:  
     点击show assistant editor按钮，打开辅助编辑器，在编辑器中打开view controller文件.h/.m  
     在Document outline中选中控件，按住ctrl键，拖拽到view controller中的@interface代码块内；  
     松开手指，弹出outlet connection对话框，在输入框中输入新生成的控件实例名称，回车确定；  
     如果是在.h中添加实例，则实例是public，如果是在.m的@interface代码块内添加实例，则实例是private的；  
     
-* :zap:[3]. __UI控件如何添加交互动作?__:  
+* :zap:[3]. __UI控件如何添加交互动作__:  
     先在.h中添加 -(IBAction)eventHandlerName;  
     然后在.m中添加响应动作的实现 - (IBAction)eventHandlerName {}；  
     在Document outline中选中控件，打开connection inspector面板；  
@@ -35,18 +35,18 @@ this is my daily records in ios development, learned one then write down one...
   [2] iPhone 6 则采用了1334×750分辨率的屏幕，PPI值为326。  
   显然，iPhone 6 Plus显示效果比iPhone 6好很多。  
 
-* :zap:[5]. __如何为源码中的outlet连接到UI控件?__:  
+* :zap:[5]. __如何为源码中的outlet连接到UI控件__:  
     当.h代码中添加outlet比如：@property (nonatomic, strong) IBOutlet MKMapView *mapView;  
     而且.m中添加了实现比如@synthesize mapView;  
     则可以通过按住ctrl键，拖拽view controller图标到storyborad上的ui control对象上释放；  
     选择弹出列表已定义的outlet实例即可；  
     
-* :zap:[6]. __如何让UI控件自适应iphone5, iphone6不同大小屏幕?__:  
+* :zap:[6]. __如何让UI控件自适应iphone5, iphone6不同大小屏幕__:  
     故事板中的控件均应该添加丢失的约束，这样不至于下次打开工程时发生控件失踪事件。。。  
     在toolbar中的控件没法通过约束自适应，只能通过flexible space bbi & fixed space bbi;  
     ~~暂时无法通过IB来控制应用界面适配iphone5和iphone6~~....
     
-* :zap:[7]. __如何修改navigation item中的返回标题?__:  
+* :zap:[7]. __如何修改navigation item中的返回标题__:  
     当view controller嵌入navigation controller后，当前的vc就有了标题栏(Navigation Item)；  
     标题栏内左边默认的的返回方式是< Back，当选中这个标题栏，然后在属性面板中可以添加Title和BackButton中的文字来修改；  
     
@@ -58,13 +58,13 @@ this is my daily records in ios development, learned one then write down one...
 
 ### @2015/05/14
 
-* :zap:[8]. __如何自定义视图组件？__:  
+* :zap:[8]. __如何自定义视图组件__:  
     创建一个components组，选中该组，按下cmd + n 弹出对话框：  
     New File... > iOS/Source, 选择 Cocoa Touch Class , Next > 输入新建的Class名称，指定 Subclass of: UIView , Next > 选择物理路径， Create  
     这样就生成了.h/.m文件，实现.m中的个别方法例如drawRect，就可以将此类指定给故事板上的视图了：  
     选定视图 > 切换到Identity inspector > Custom Class: Class下拉列表中找到刚才创建的类，这样就完成了视图自定义；  
 
-* :zap:[9]. __如何让自定义视图在不变形的情况下水平居中？__:  
+* :zap:[9]. __如何让自定义视图在不变形的情况下水平居中__:  
     垂直方向，距离顶部或者底部指定一个Vertical Space 约束就行，不能同时在该方向指定两个约束，否则垂直方向会被拉伸；  
     水平方向，指定一个Center X Alignment，即水平对齐，选中该约束，视图上会高亮显示一个垂直的轴线；  
     视图内部如果有控件的话，内部控件也要设置水平、垂直、水平居中、控件大小约束，可以根据建议来自动设置；  
@@ -73,7 +73,7 @@ this is my daily records in ios development, learned one then write down one...
 
 ### @2015/05/18
 
-* :zap:[10]. __如何将[MBProgressHUD](https://github.com/jdg/MBProgressHUD)组件引入当前工程？__:  
+* :zap:[10]. __如何将[MBProgressHUD](https://github.com/jdg/MBProgressHUD)组件引入当前工程__:  
     MBProgressHUD是非常常用的进度条组件，引入步骤也非常简单，使用CocoaPods方式受GWF所限，这里只用源码方式：  
     在你的工程目录下`$ git clone https://github.com/jdg/MBProgressHUD.git`  
     xcode中打开你的工程，打开MBProgressHUD文件夹，从中拖拽MBProgressHUD.h和MBProgressHUD.m到你的工程视图目录树中  
@@ -99,7 +99,7 @@ this is my daily records in ios development, learned one then write down one...
     
 ### @2015/05/22
 
-* :zap:[12]. __Objective-C语言#import引入头文件时，.h和.m有什么区别？__:  
+* :zap:[12]. __Objective-C语言#import引入头文件时，.h和.m有什么区别__:  
   .h文件是头文件，包含了类，类型、函数与常数的声明；.m文件是源代码文件；在头文件导入.h可以确保相同的文件只会被包含一次，  
   而不会重复的导入相同类型的文件；而在.m文件导入，你就会发现在其他的头文件中可以同样导入相关联的文件，区别就在于这里;
   注：来自百度百科
@@ -117,7 +117,7 @@ this is my daily records in ios development, learned one then write down one...
 
 ### @2015/05/26
 
-* :zap:[15]. __如何为动态按钮或者列表项添加导航？__:  
+* :zap:[15]. __如何为动态按钮或者列表项添加导航__:  
   动态创建的按钮或者table cell有时需要实现点击跳转功能，这就需要动态导航；  
   这时需要：  
   为目标view controller指定storyboard id，比如：conversation_view  
@@ -129,7 +129,7 @@ this is my daily records in ios development, learned one then write down one...
 
 ### @2015/05/27
 
-* :zap:[16]. __在当前视图的按钮上点击后如何通过segues给导航控制器对应的视图传值?__:  
+* :zap:[16]. __在当前视图的按钮上点击后如何通过segues给导航控制器对应的视图传值__:  
   在当前视图控制器中实现方法：`- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender;`  
   在该方法中通过segue找回目标视图：  
   `UINavigationController *navigator = (UINavigationController *) [segue destinationViewController];`  
