@@ -1,4 +1,4 @@
-ios development tips for newies 
+ios development tips for newbies 
 ======================================
 this is my daily records in ios development, learned one then write down one... 
 
