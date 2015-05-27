@@ -58,7 +58,7 @@ this is my daily records in ios development, learned one then write down one...
 
 ### @2015/05/14
 
-* :zap:[8]. __如何自定义视图组件？__: 
+* :zap:[8]. __如何自定义视图组件？__:  
     创建一个components组，选中该组，按下cmd + n 弹出对话框：  
     New File... > iOS/Source, 选择 Cocoa Touch Class , Next > 输入新建的Class名称，指定 Subclass of: UIView , Next > 选择物理路径， Create  
     这样就生成了.h/.m文件，实现.m中的个别方法例如drawRect，就可以将此类指定给故事板上的视图了：  
