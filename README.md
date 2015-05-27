@@ -115,7 +115,22 @@ this is my daily records in ios development, learned one then write down one...
   sleep方式  
   GCD方式  
 
-* :zap:[15]. ____:
+### @2015/05/26
+
+* :zap:[15]. __如何为动态按钮或者列表项添加导航？__:
+  动态创建的按钮或者table cell有时需要实现点击跳转功能，这就需要动态导航；  
+  这时需要：  
+  为目标view controller指定storyboard id，比如：conversation_view  
+  然后通过代码创建该视图控制器实例：  
+  `ConversationViewController *myVController = (ConversationViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"conversation_view"];` 
+  最后完成导航：  
+  `[self.navigationController pushViewController:myVController animated:YES];`  
+  注意前提是当前视图控制器已经嵌入了导航控制器  
+
+### @2015/05/26
+
+* :zap:[16]. __xxx__:
+
 
 
 
