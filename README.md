@@ -97,4 +97,27 @@ this is my daily records in ios development, learned one then write down one...
     如果以前是以源码方式引入库，再使用pod方式重新添加该库时，则要在工程视图中删掉拷贝进来的.h/.m文件，否则编译失败  
     报错说符号重复。。。因为重复引用了。。。
     
-    
+### @2015/05/22
+
+* :zap:[12]. __Objective-C语言#import引入头文件时，.h和.m有什么区别？__:
+  .h文件是头文件，包含了类，类型、函数与常数的声明；.m文件是源代码文件；在头文件导入.h可以确保相同的文件只会被包含一次，  
+  而不会重复的导入相同类型的文件；而在.m文件导入，你就会发现在其他的头文件中可以同样导入相关联的文件，区别就在于这里;
+  注：来自百度百科
+  TODO: 还需进一步理解...
+  
+* :zap:[13]. __如何理解UIViewController lifecycle__:
+  viewDidLoad -> ViewWillAppear:(BOOL)animated -> ViewDidAppear:(BOOL)animated -> ViewDidUnload -> ViewDidDispose
+  参考：[这里](http://stackoverflow.com/questions/5562938/looking-to-understand-the-ios-uiviewcontroller-lifecycle)
+
+* :zap:[14]. __IOS中延时执行的几种方式[比较和汇总](http://blog.sina.com.cn/s/blog_8280f5ec0101k03c.html)__:
+  performSelector方法  
+  定时器:NSTimer  
+  sleep方式  
+  GCD方式  
+
+* :zap:[15]. ____:
+
+
+
+
+

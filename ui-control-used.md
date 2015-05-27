@@ -7,3 +7,4 @@
 * [CCMBorderView](https://github.com/cacmartinez/CCMBorderView)
 * [CCMRadarView](https://github.com/cacmartinez/CCMRadarView)
 * [PulsingHalo](https://github.com/shu223/PulsingHalo)
+* [FLAnimatedImage](https://github.com/Flipboard/FLAnimatedImage)
