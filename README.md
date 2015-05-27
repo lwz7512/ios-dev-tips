@@ -127,9 +127,18 @@ this is my daily records in ios development, learned one then write down one...
   `[self.navigationController pushViewController:myVController animated:YES];`  
   注意前提是当前视图控制器已经嵌入了导航控制器  
 
-### @2015/05/26
+### @2015/05/27
 
-* :zap:[16]. __xxx__:
+* :zap:[16]. __在当前视图的按钮上点击后如何通过segues给导航控制器对应的视图传值?__:  
+  在当前视图控制器中实现方法：`- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender;`  
+  在该方法中通过segue找回目标视图：  
+  `UINavigationController *navigator = (UINavigationController *) [segue destinationViewController];`  
+  现在得到导航控制器就可以从中找到所关联的视图控制器：  
+  `UCustomViewController *destination = (UCustomViewController*) navigator.topViewController;`  
+  其中的关键就是使用导航控制器的topViewController属性  
+  目标视图找到了，然后就可以为其定义的属性传值了：`destination.data = @"pass something..."`;  
+
+* :zap:[17]. __xxx__:  
 
 
 
