@@ -122,7 +122,7 @@ this is my daily records in ios development, learned one then write down one...
   这时需要：  
   为目标view controller指定storyboard id，比如：conversation_view  
   然后通过代码创建该视图控制器实例：  
-  `ConversationViewController *myVController = (ConversationViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"conversation_view"];` 
+  `ConversationViewController *myVController = (ConversationViewController *)[self.storyboard instantiateViewControllerWithIdentifier:@"conversation_view"];`  
   最后完成导航：  
   `[self.navigationController pushViewController:myVController animated:YES];`  
   注意前提是当前视图控制器已经嵌入了导航控制器  
