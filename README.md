@@ -165,7 +165,15 @@ this is my daily records in ios development, learned one then write down one...
   在弹出对话框中填写约束实例名称比如：btnHeightConst ，然后就可以修改它的值：  
   `btnHeightConst.constant = 50`  
 
-* :zap:[22]. __xxx__:
+### @2015/06/01
+
+* :zap:[22]. __如何动态给按钮添加动作__:
+  通常情况界面中的动作可以通过拖拽关联IBAction方法，但是在动态创建按钮的情况下，需要动态添加按钮动作：  
+  `[someButton addTarget:self action:@selector(buttonInvokeAction) forControlEvents:UIControlEventTouchUpInside];`  
+  buttonInvokeAction是当前vc里定义的someButton要触发的方法  
+
+
+* :zap:[23]. __xxx__:
 
 
 
