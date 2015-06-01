@@ -9,3 +9,5 @@
 * [PulsingHalo](https://github.com/shu223/PulsingHalo)
 * [FLAnimatedImage](https://github.com/Flipboard/FLAnimatedImage)
 * [YHRoundBorderedButton](https://github.com/yhpark/YHRoundBorderedButton)
+* [TGCameraViewController](https://github.com/tdginternet/TGCameraViewController)
+* []()
