@@ -157,8 +157,8 @@ this is my daily records in ios development, learned one then write down one...
   目标视图找到了，然后就可以为其定义的属性传值了：`destination.data = @"pass something..."`;  
 
 * :zap:[20]. __如何理解xib文件并使用__:  
-  .xib文件一般用作一个视图的组合，即view中有view，可以为其制定父类，并加载到当前控制器中  
-  .xib文件，还可以理解为一个独立的view controller，相当于从对象库中拖出到故事板上的一屏  
+  .xib文件一般用作一个视图的组合，即view中有view，可以为其制定父类，成为自定义视图组件  
+  .xib文件还可以为其指定File owner，关联到自定义view controller上，相当于从对象库中拖出到故事板上的一屏  
 
 * :zap:[21]. __如何运行时修改约束__:  
   在document outline中选中目标constraint，按住ctrl拖拽到view controller中的interface中释放  
@@ -172,8 +172,20 @@ this is my daily records in ios development, learned one then write down one...
   `[someButton addTarget:self action:@selector(buttonInvokeAction) forControlEvents:UIControlEventTouchUpInside];`  
   buttonInvokeAction是当前vc里定义的someButton要触发的方法  
 
+### @2015/06/04
 
-* :zap:[23]. __xxx__:
+* :zap:[23]. __如何通过.xib文件来自定义视图组件__:
+  首先新建一个.xib文件，选择模板：iOS/User Interface/View，选择保存路径生成文件  
+  在项目导航器中选中该文件，舞台上出现类似view controller的画板，画板左边有三个图标，分别是：  
+  File's Owner, First Responder, View  
+  选中View，在右侧属性检查器中的Simulated Metrics选项中：  
+  Size: Freefrom  
+  StatusBar: None  
+  新建一个父类为UIView的cocoa touch class比如CustomView, 作为.xib文件的父类  
+  再次选中刚才的View按钮，在右侧Identity Inspector/Custom Class/Class中关联上面新建的自定义视图类  
+  后面的操作，就跟故事版中编辑view controller类似了，只不过UIView有自己的重载方法  
+
+* :zap:[24]. __xxx__:
 
 
 
