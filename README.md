@@ -167,14 +167,14 @@ this is my daily records in ios development, learned one then write down one...
 
 ### @2015/06/01
 
-* :zap:[22]. __如何动态给按钮添加动作__:
+* :zap:[22]. __如何动态给按钮添加动作__:  
   通常情况界面中的动作可以通过拖拽关联IBAction方法，但是在动态创建按钮的情况下，需要动态添加按钮动作：  
   `[someButton addTarget:self action:@selector(buttonInvokeAction) forControlEvents:UIControlEventTouchUpInside];`  
   buttonInvokeAction是当前vc里定义的someButton要触发的方法  
 
 ### @2015/06/04
 
-* :zap:[23]. __如何通过.xib文件来自定义视图组件__:
+* :zap:[23]. __如何通过.xib文件来自定义视图组件__:  
   首先新建一个.xib文件，选择模板：iOS/User Interface/View，选择保存路径生成文件  
   在项目导航器中选中该文件，舞台上出现类似view controller的画板，画板左边有三个图标，分别是：  
   File's Owner, First Responder, View  
@@ -185,7 +185,7 @@ this is my daily records in ios development, learned one then write down one...
   再次选中刚才的View按钮，在右侧Identity Inspector/Custom Class/Class中关联上面新建的自定义视图类  
   后面的操作，就跟故事版中编辑view controller类似了，只不过UIView有自己的重载方法  
 
-* :zap:[24]. __xxx__:
+* :zap:[24]. __xxx__:  
 
 
 
