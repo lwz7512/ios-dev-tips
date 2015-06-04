@@ -185,7 +185,14 @@ this is my daily records in ios development, learned one then write down one...
   再次选中刚才的View按钮，在右侧Identity Inspector/Custom Class/Class中关联上面新建的自定义视图类  
   后面的操作，就跟故事版中编辑view controller类似了，只不过UIView有自己的重载方法  
 
-* :zap:[24]. __xxx__:  
+* :zap:[24]. __如何定义可以适应屏幕的xib视图__:  
+  在上一个技巧中，介绍通过xib文件自定义视图组件的流程，但是上面的做法只能定义固定大小的视图组件  
+  如果改组件要适配不同屏幕，并响应给定的组件frame值，则需要定义约束：  
+  还是在上面的流程中，修改Simulated Metrics/Size，为默认的值：Inferred  
+  这样画板又变大了，重新为当前视图组件指定约束，这样就可以适配屏幕和frame值了  
+
+
+* :zap:[26]. __xxx__:  
 
 
 
