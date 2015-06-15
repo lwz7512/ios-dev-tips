@@ -193,7 +193,8 @@ this is my daily records in ios development, learned one then write down one...
 
 ### @2015/06/16
 
-* :zap:[25]. __如何通过delegate模式实现子窗口调用父窗口关闭功能__:
+* :zap:[25]. __如何通过delegate模式实现子窗口调用父窗口关闭功能__:  
+
   1.SubViewController.h: 
   
       @protocol CloseMeDelegate <NSObject>
