@@ -196,40 +196,40 @@ this is my daily records in ios development, learned one then write down one...
 * :zap:[25]. __如何通过delegate模式实现子窗口调用父窗口关闭功能__:
   1.SubViewController.h: 
   
-      ` @protocol CloseMeDelegate <NSObject>
-        - (void) closeMe;
-        @end
+      @protocol CloseMeDelegate <NSObject>
+      - (void) closeMe;
+      @end
         
-        @interface ReplyPopupViewController : UIViewController
-        @property (nonatomic, weak) id <CloseMeDelegate> delegate;
-        - (IBAction)tappedCloseModal:(id)sender;
-        @end`  
+      @interface ReplyPopupViewController : UIViewController
+      @property (nonatomic, weak) id <CloseMeDelegate> delegate;
+      - (IBAction)tappedCloseModal:(id)sender;
+      @end 
   
   2.SubViewController.m中添加如下实现方法:  
   
-      `@synthesize delegate;
-
-       - (IBAction)tappedCloseModal:(id)sender {
-          [delegate closeMe];
-       }`
+      @synthesize delegate;
+      
+      - (IBAction)tappedCloseModal:(id)sender {
+        [delegate closeMe];
+      }
   
   3.MainViewController.h:  
   
-      `#import "SubViewController.h"
-       @interface MainViewController : UIViewController<CloseMeDelegate>
-       @end`
-
+      #import "SubViewController.h"
+      @interface MainViewController : UIViewController<CloseMeDelegate>
+      @end
+      
   4.MainViewController.m实现关闭子窗口:  
   
-      `- (void)viewDidLoad {
-          //init SubViewController from storyboard
-          //指定子窗口的代理为当前控制器
-          //subVC.delegate = self;
-        }
+      - (void)viewDidLoad {
+        //init SubViewController from storyboard
+        //指定子窗口的代理为当前控制器
+        //subVC.delegate = self;
+      }
         //实现代理方法
-       -(void) closeMe {
-          [self dismissPopUpViewController];
-       }`
+      -(void) closeMe {
+        [self dismissPopUpViewController];
+       }
 
 * :zap:[26]. __xxx__:  
 
