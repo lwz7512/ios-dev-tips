@@ -191,6 +191,47 @@ this is my daily records in ios development, learned one then write down one...
   还是在上面的流程中，修改Simulated Metrics/Size，为默认的值：Inferred  
   这样画板又变大了，重新为当前视图组件指定约束，这样就可以适配屏幕和frame值了  
 
+### @2015/06/16
+
+* :zap:[25]. __如何通过delegate模式实现子窗口调用父窗口关闭功能__:
+  1.SubViewController.h:  
+  `@protocol CloseMeDelegate <NSObject>
+  - (void) closeMe;
+  @end
+
+  @interface ReplyPopupViewController : UIViewController
+  @property (nonatomic, weak) id <CloseMeDelegate> delegate;
+  - (IBAction)tappedCloseModal:(id)sender;
+  @end
+  `  
+  
+  2.SubViewController.m中添加如下实现方法:  
+  `
+  @synthesize delegate;
+
+  - (IBAction)tappedCloseModal:(id)sender {
+      [delegate closeMe];
+  }
+  `
+  
+  3.MainViewController.h:  
+  `#import "SubViewController.h"
+   @interface MainViewController : UIViewController<CloseMeDelegate>
+   @end
+  `
+
+  4.MainViewController.m实现关闭子窗口:  
+  `
+  - (void)viewDidLoad {
+    //init SubViewController from storyboard
+    //指定子窗口的代理为当前控制器
+    //subVC.delegate = self;
+  }
+  //实现代理方法
+  -(void) closeMe {
+      [self dismissPopUpViewController];
+    }
+  `
 
 * :zap:[26]. __xxx__:  
 
