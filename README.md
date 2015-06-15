@@ -195,7 +195,7 @@ this is my daily records in ios development, learned one then write down one...
 
 * :zap:[25]. __如何通过delegate模式实现子窗口调用父窗口关闭功能__:  
 
-  1.SubViewController.h: 
+  1.SubViewController.h创建代理: 
   
       @protocol CloseMeDelegate <NSObject>
       - (void) closeMe;
@@ -206,7 +206,7 @@ this is my daily records in ios development, learned one then write down one...
       - (IBAction)tappedCloseModal:(id)sender;
       @end 
   
-  2.SubViewController.m中添加如下实现方法:  
+  2.SubViewController.m中实现实现方法:  
   
       @synthesize delegate;
       
@@ -214,13 +214,13 @@ this is my daily records in ios development, learned one then write down one...
         [delegate closeMe];
       }
   
-  3.MainViewController.h:  
+  3.MainViewController.h遵循代理:  
   
       #import "SubViewController.h"
       @interface MainViewController : UIViewController<CloseMeDelegate>
       @end
       
-  4.MainViewController.m实现关闭子窗口:  
+  4.MainViewController.m实现代理的关闭子窗口:  
   
       - (void)viewDidLoad {
         //init SubViewController from storyboard
