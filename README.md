@@ -206,7 +206,7 @@ this is my daily records in ios development, learned one then write down one...
       - (IBAction)tappedCloseModal:(id)sender;
       @end 
   
-  2.SubViewController.m中实现实现方法:  
+  2.SubViewController.m暴露代理属性和代理操作方法:  
   
       @synthesize delegate;
       
